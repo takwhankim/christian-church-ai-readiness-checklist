@@ -39,7 +39,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
-            background: #5a67d8;
+            background: #f0f4f8;
             min-height: 100vh;
             padding: 20px;
         }
@@ -66,7 +66,7 @@
         }
         
         .header {
-            background: #4c51bf;
+            background: #667eea;
             color: white;
             padding: 40px;
             text-align: center;
@@ -173,7 +173,24 @@
         }
         
         .score-range.excellent {
-            background: rgba(56, 161, 105, 0.1);
+            background: rgba(16, 185, 129, 0.1);
+            border: 2px solid rgba(16, 185, 129, 0.3);
+        }
+        
+        .score-range.good {
+            background: rgba(59, 130, 246, 0.1);
+            border: 2px solid rgba(59, 130, 246, 0.3);
+        }
+        
+        .score-range.caution {
+            background: rgba(245, 158, 11, 0.1);
+            border: 2px solid rgba(245, 158, 11, 0.3);
+        }
+        
+        .score-range.poor {
+            background: rgba(239, 68, 68, 0.1);
+            border: 2px solid rgba(239, 68, 68, 0.3);
+        }
             border: 2px solid rgba(56, 161, 105, 0.3);
         }
         
@@ -217,7 +234,7 @@
         }
         
         .start-notice {
-            background: #4c51bf;
+            background: #667eea;
             color: white;
             padding: 25px;
             border-radius: 12px;
@@ -227,9 +244,9 @@
         }
         
         @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(65, 88, 208, 0.4); }
-            70% { box-shadow: 0 0 0 10px rgba(65, 88, 208, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(65, 88, 208, 0); }
+            0% { box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(102, 126, 234, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(102, 126, 234, 0); }
         }
         
         .start-notice p {
@@ -342,7 +359,7 @@
         }
         
         .calculate-btn {
-            background: #4c51bf;
+            background: #667eea;
             color: white;
             padding: 15px 40px;
             border: none;
@@ -353,7 +370,13 @@
             transition: all 0.3s ease;
             display: block;
             margin: 40px auto;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.2);
+        }
+        
+        .calculate-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+            background: #5a67d8;
         }
         
         .calculate-btn:hover {
@@ -376,22 +399,22 @@
         }
         
         .result.excellent {
-            background: #38a169;
+            background: #10b981;
             color: white;
         }
         
         .result.good {
-            background: #3182ce;
+            background: #3b82f6;
             color: white;
         }
         
         .result.caution {
-            background: #d69e2e;
+            background: #f59e0b;
             color: white;
         }
         
         .result.poor {
-            background: #e53e3e;
+            background: #ef4444;
             color: white;
         }
         
@@ -422,7 +445,7 @@
         
         .progress {
             height: 100%;
-            background: #4c51bf;
+            background: #667eea;
             border-radius: 4px;
             width: 0%;
             transition: width 0.3s ease;
