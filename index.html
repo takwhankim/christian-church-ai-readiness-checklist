@@ -10,7 +10,7 @@
     <meta property="og:url" content="https://takwhankim.github.io/christian-church-ai-readiness-checklist/">
     <meta property="og:title" content="성도용 AI 활용 준비도 체크리스트">
     <meta property="og:description" content="교회 성도들의 AI 기술 활용 준비 상태를 평가하고 개선 방향을 제시하는 체크리스트입니다. 6개 영역 10개 질문으로 구성되었습니다.">
-    <meta property="og:image" content="https://takwhankim.github.io/christian-church-ai-readiness-checklist/christian.png">
+    <meta property="og:image" content="https://takwhankim.github.io/christian-church-ai-readiness-checklist/christian.png?v=1">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     
@@ -19,7 +19,7 @@
     <meta property="twitter:url" content="https://takwhankim.github.io/christian-church-ai-readiness-checklist/">
     <meta property="twitter:title" content="성도용 AI 활용 준비도 체크리스트">
     <meta property="twitter:description" content="교회 성도들의 AI 기술 활용 준비 상태를 평가하고 개선 방향을 제시하는 체크리스트입니다.">
-    <meta property="twitter:image" content="https://takwhankim.github.io/christian-church-ai-readiness-checklist/christian.png")
+    <meta property="twitter:image" content="https://takwhankim.github.io/christian-church-ai-readiness-checklist/christian.png?v=1">
     
     <!-- SEO Meta Tags -->
     <meta name="description" content="교회 성도들의 AI 기술 활용 준비 상태를 평가하고 개선 방향을 제시하는 체크리스트입니다. 6개 영역 10개 질문으로 구성되었습니다.">
@@ -96,18 +96,18 @@
             border-radius: 12px;
             padding: 30px;
             margin-bottom: 25px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            border-left: 4px solid #4158d0;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.08);
+            border-left: 4px solid #ff6b6b;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         
         .info-card:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            box-shadow: 0 8px 25px rgba(255, 107, 107, 0.15);
         }
         
         .info-card h2 {
-            color: #4158d0;
+            color: #ff6b6b;
             margin-bottom: 15px;
             font-size: 1.4em;
         }
@@ -139,7 +139,7 @@
         }
         
         .area-number {
-            background: #4158d0;
+            background: #ff6b6b;
             color: white;
             width: 24px;
             height: 24px;
@@ -191,26 +191,9 @@
             background: rgba(239, 68, 68, 0.1);
             border: 2px solid rgba(239, 68, 68, 0.3);
         }
-            border: 2px solid rgba(56, 161, 105, 0.3);
-        }
-        
-        .score-range.good {
-            background: rgba(49, 130, 206, 0.1);
-            border: 2px solid rgba(49, 130, 206, 0.3);
-        }
-        
-        .score-range.caution {
-            background: rgba(214, 158, 46, 0.1);
-            border: 2px solid rgba(214, 158, 46, 0.3);
-        }
-        
-        .score-range.poor {
-            background: rgba(229, 62, 62, 0.1);
-            border: 2px solid rgba(229, 62, 62, 0.3);
-        }
         
         .score-badge {
-            background: #4158d0;
+            background: #ff6b6b;
             color: white;
             padding: 8px 16px;
             border-radius: 20px;
@@ -259,9 +242,10 @@
             margin-bottom: 40px;
             padding: 30px;
             border-radius: 10px;
-            background: #f8f9fa;
-            border-left: 5px solid #4158d0;
+            background: white;
+            border-left: 5px solid #ff6b6b;
             transition: transform 0.3s ease;
+            box-shadow: 0 2px 10px rgba(255, 107, 107, 0.05);
         }
         
         .section:hover {
@@ -269,7 +253,7 @@
         }
         
         .section h2 {
-            color: #4158d0;
+            color: #ff6b6b;
             margin-bottom: 20px;
             font-size: 1.5em;
             display: flex;
@@ -277,7 +261,7 @@
         }
         
         .section-number {
-            background: #4158d0;
+            background: #ff6b6b;
             color: white;
             width: 30px;
             height: 30px;
@@ -295,6 +279,22 @@
             background: white;
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: relative;
+        }
+        
+        .question.answered {
+            border-left: 4px solid #10b981;
+            transform: translateX(-2px);
+        }
+        
+        .question.answered::after {
+            content: '✓';
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            color: #10b981;
+            font-weight: bold;
+            font-size: 1.2em;
         }
         
         .question h3 {
@@ -333,14 +333,20 @@
         }
         
         .scale-option:hover {
-            background: rgba(65, 88, 208, 0.1);
+            background: rgba(255, 107, 107, 0.1);
         }
         
         .scale-option input[type="radio"] {
             margin-bottom: 5px;
             width: 18px;
             height: 18px;
-            accent-color: #4158d0;
+            accent-color: #ff6b6b;
+        }
+        
+        .scale-option input[type="radio"]:checked + label {
+            transform: scale(1.1);
+            font-weight: bold;
+            color: #ff6b6b;
         }
         
         .scale-option label {
@@ -359,7 +365,7 @@
         }
         
         .calculate-btn {
-            background: #667eea;
+            background: #ff6b6b;
             color: white;
             padding: 15px 40px;
             border: none;
@@ -370,18 +376,13 @@
             transition: all 0.3s ease;
             display: block;
             margin: 40px auto;
-            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.2);
+            box-shadow: 0 5px 20px rgba(255, 107, 107, 0.2);
         }
         
         .calculate-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
-            background: #5a67d8;
-        }
-        
-        .calculate-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            box-shadow: 0 8px 25px rgba(255, 107, 107, 0.3);
+            background: #ff5252;
         }
         
         .result {
@@ -445,10 +446,111 @@
         
         .progress {
             height: 100%;
-            background: #667eea;
+            background: #ff6b6b;
             border-radius: 4px;
             width: 0%;
             transition: width 0.3s ease;
+        }
+        
+        /* 개인정보 수집 부분 */
+        .optional-info {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 30px;
+            margin-top: 30px;
+            border: 2px dashed #ff6b6b;
+            display: none;
+        }
+        
+        .optional-info h3 {
+            color: #ff6b6b;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        
+        .optional-info p {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .info-grid select {
+            padding: 12px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 1rem;
+            background: white;
+            transition: border-color 0.3s ease;
+        }
+        
+        .info-grid select:focus {
+            outline: none;
+            border-color: #ff6b6b;
+        }
+        
+        .email-input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 1rem;
+            margin-bottom: 15px;
+            transition: border-color 0.3s ease;
+        }
+        
+        .email-input:focus {
+            outline: none;
+            border-color: #ff6b6b;
+        }
+        
+        .consent-label {
+            display: flex;
+            align-items: center;
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .consent-label input[type="checkbox"] {
+            margin-right: 8px;
+            accent-color: #ff6b6b;
+        }
+        
+        .personalized-result {
+            background: rgba(102, 126, 234, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .personalized-result h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .toggle-info-btn {
+            background: #667eea;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 0.9em;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .toggle-info-btn:hover {
+            background: #5a67d8;
+            transform: translateY(-1px);
         }
         
         footer {
@@ -479,14 +581,23 @@
             }
             
             .likert-scale {
-                flex-direction: column;
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
                 gap: 15px;
+                padding: 20px;
             }
             
             .scale-option {
-                min-width: 100%;
-                flex-direction: row;
-                justify-content: space-between;
+                min-width: auto;
+                padding: 15px 10px;
+                border: 2px solid #ff6b6b;
+                border-radius: 12px;
+                background: white;
+            }
+            
+            .scale-option:hover {
+                background: #ff6b6b;
+                color: white;
             }
             
             .scoring-system {
@@ -511,6 +622,10 @@
             
             .info-card {
                 padding: 20px;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -537,28 +652,16 @@
                     <h2>평가 영역 (6개 분야)</h2>
                     <div class="evaluation-areas">
                         <div class="area-item">
-                            <span class="area-number">1</span>
-                            <span>AI에 대한 기본 이해도</span>
-                        </div>
-                        <div class="area-item">
-                            <span class="area-number">2</span>
-                            <span>디지털 기기 활용 능력</span>
-                        </div>
-                        <div class="area-item">
-                            <span class="area-number">3</span>
-                            <span>신앙생활에서의 AI 활용 의지</span>
-                        </div>
-                        <div class="area-item">
                             <span class="area-number">4</span>
-                            <span>AI의 신앙적 가치 인식</span>
+                            <span>학습 의지와 적응력</span>
                         </div>
                         <div class="area-item">
                             <span class="area-number">5</span>
-                            <span>학습 및 적응 의지</span>
+                            <span>AI 윤리와 신앙적 가치관</span>
                         </div>
                         <div class="area-item">
                             <span class="area-number">6</span>
-                            <span>AI 윤리 및 안전 의식</span>
+                            <span>실제 활용 계획과 기대</span>
                         </div>
                     </div>
                 </div>
@@ -570,28 +673,28 @@
                             <div class="score-badge">40-50점</div>
                             <div class="score-info">
                                 <h3>AI 활용 준비 완료</h3>
-                                <p>AI를 신앙생활과 일상에서 효과적으로 활용할 준비가 잘 되어 있습니다.</p>
+                                <p>AI를 적극적으로 활용할 준비가 되어 있습니다. 다양한 AI 도구들을 시도해보세요.</p>
                             </div>
                         </div>
                         <div class="score-range good">
                             <div class="score-badge">30-39점</div>
                             <div class="score-info">
-                                <h3>기본 준비 완료</h3>
-                                <p>기본적인 준비는 되어있으나 추가 학습을 통해 더 나은 활용이 가능합니다.</p>
+                                <h3>기본 활용 가능</h3>
+                                <p>기본적인 AI 활용이 가능합니다. 간단한 도구부터 차근차근 시작해보세요.</p>
                             </div>
                         </div>
                         <div class="score-range caution">
                             <div class="score-badge">20-29점</div>
                             <div class="score-info">
-                                <h3>학습 필요</h3>
-                                <p>AI 활용을 위해 기초적인 학습과 연습이 필요한 상태입니다.</p>
+                                <h3>학습 후 활용 권장</h3>
+                                <p>기초 학습이 필요합니다. 교회나 지인의 도움을 받아 천천히 시작해보세요.</p>
                             </div>
                         </div>
                         <div class="score-range poor">
                             <div class="score-badge">19점 이하</div>
                             <div class="score-info">
-                                <h3>단계적 접근 권장</h3>
-                                <p>디지털 기초부터 차근차근 시작하여 점진적으로 발전시켜 나가세요.</p>
+                                <h3>단계적 접근 필요</h3>
+                                <p>디지털 기초부터 차근차근 배우시길 권장합니다. 서두르지 마세요.</p>
                             </div>
                         </div>
                     </div>
@@ -603,7 +706,7 @@
                 </div>
                 
                 <div class="start-notice">
-                    <p>준비되셨다면 아래 질문들에 솔직하게 답변해 주세요!</p>
+                    <p>솔직하게 답변해주세요. 현재 상태를 정확히 파악하는 것이 중요합니다!</p>
                 </div>
             </div>
 
@@ -614,8 +717,8 @@
                     <div class="question">
                         <h3>AI가 무엇인지 어느 정도 이해하고 있나요?</h3>
                         <div class="description">
-                            ChatGPT, 구글 어시스턴트, 시리 등의 AI 서비스가 어떻게 작동하는지 기본적인 개념을 알고 계신가요?<br>
-                            AI가 일상생활에서 어떻게 활용되고 있는지 파악하고 계신가요?
+                            ChatGPT, 구글 번역, 시리/빅스비 같은 AI 서비스를 알고 있거나 사용해본 적이 있나요?<br>
+                            AI가 어떤 일을 할 수 있는지 대략적으로 알고 계신가요?
                         </div>
                         <div class="likert-scale">
                             <div class="scale-option">
@@ -640,15 +743,16 @@
                             </div>
                         </div>
                         <div class="scale-labels">
-                            <span>전혀 모른다</span>
-                            <span>매우 잘 안다</span>
+                            <span>전혀 모르겠다</span>
+                            <span>잘 알고 있다</span>
                         </div>
                     </div>
                     
                     <div class="question">
-                        <h3>AI 도구들을 실제로 사용해본 경험이 있나요?</h3>
+                        <h3>AI 기술에 대해 관심이 있고 배우고 싶은 마음이 있나요?</h3>
                         <div class="description">
-                            ChatGPT, 구글 번역, 네이버 파파고, 음성인식 등의 AI 서비스를 직접 사용해보신 적이 있나요?
+                            새로운 AI 서비스나 기능이 나오면 관심을 갖고 지켜보시나요?<br>
+                            AI를 배워서 일상생활이나 신앙생활에 도움이 되었으면 좋겠다고 생각하시나요?
                         </div>
                         <div class="likert-scale">
                             <div class="scale-option">
@@ -673,8 +777,8 @@
                             </div>
                         </div>
                         <div class="scale-labels">
-                            <span>전혀 없다</span>
-                            <span>매우 많다</span>
+                            <span>전혀 관심 없다</span>
+                            <span>매우 관심 있다</span>
                         </div>
                     </div>
                 </div>
@@ -683,10 +787,10 @@
                     <h2><span class="section-number">2</span>디지털 기기 활용 능력</h2>
                     
                     <div class="question">
-                        <h3>스마트폰이나 컴퓨터를 능숙하게 사용할 수 있나요?</h3>
+                        <h3>스마트폰이나 컴퓨터를 자유롭게 사용할 수 있나요?</h3>
                         <div class="description">
-                            앱 설치, 인터넷 검색, 이메일 사용, 온라인 예약 등을 혼자서 할 수 있나요?<br>
-                            새로운 앱이나 프로그램을 배워서 사용하는 것에 부담이 없나요?
+                            앱 다운로드, 인터넷 검색, 이메일 보내기, 온라인 쇼핑 등을 혼자서 할 수 있나요?<br>
+                            새로운 앱이나 기능을 배우는 것이 어렵지 않나요?
                         </div>
                         <div class="likert-scale">
                             <div class="scale-option">
@@ -711,8 +815,42 @@
                             </div>
                         </div>
                         <div class="scale-labels">
-                            <span>전혀 못한다</span>
-                            <span>매우 잘한다</span>
+                            <span>거의 사용 못함</span>
+                            <span>자유롭게 사용</span>
+                        </div>
+                    </div>
+                    
+                    <div class="question">
+                        <h3>문제가 생겼을 때 스스로 해결하려고 노력하나요?</h3>
+                        <div class="description">
+                            앱이 안 되거나 새로운 기능을 써야 할 때, 포기하지 않고 여러 방법을 시도해보시나요?<br>
+                            유튜브나 블로그를 찾아보거나 주변에 물어보는 등 적극적으로 해결하려 하시나요?
+                        </div>
+                        <div class="likert-scale">
+                            <div class="scale-option">
+                                <input type="radio" name="q2_2" value="1" id="q2_2_1">
+                                <label for="q2_2_1">1</label>
+                            </div>
+                            <div class="scale-option">
+                                <input type="radio" name="q2_2" value="2" id="q2_2_2">
+                                <label for="q2_2_2">2</label>
+                            </div>
+                            <div class="scale-option">
+                                <input type="radio" name="q2_2" value="3" id="q2_2_3">
+                                <label for="q2_2_3">3</label>
+                            </div>
+                            <div class="scale-option">
+                                <input type="radio" name="q2_2" value="4" id="q2_2_4">
+                                <label for="q2_2_4">4</label>
+                            </div>
+                            <div class="scale-option">
+                                <input type="radio" name="q2_2" value="5" id="q2_2_5">
+                                <label for="q2_2_5">5</label>
+                            </div>
+                        </div>
+                        <div class="scale-labels">
+                            <span>바로 포기함</span>
+                            <span>끝까지 노력함</span>
                         </div>
                     </div>
                 </div>
@@ -721,10 +859,10 @@
                     <h2><span class="section-number">3</span>신앙생활에서의 AI 활용 의지</h2>
                     
                     <div class="question">
-                        <h3>AI를 신앙생활에 도움이 되도록 활용하고 싶나요?</h3>
+                        <h3>AI를 신앙생활에 활용하는 것에 대해 어떻게 생각하나요?</h3>
                         <div class="description">
-                            성경 공부, 기도 생활, 찬양 선택, 성경 구절 검색 등에서 AI의 도움을 받고 싶으신가요?<br>
-                            교회 활동이나 소그룹 모임에서 AI 도구를 활용해보고 싶으신가요?
+                            성경 공부, 기도 생활, 찬양 선택 등에서 AI의 도움을 받는 것이 괜찮다고 생각하시나요?<br>
+                            AI가 신앙생활에 도움이 될 수 있다고 보시나요?
                         </div>
                         <div class="likert-scale">
                             <div class="scale-option">
@@ -749,16 +887,16 @@
                             </div>
                         </div>
                         <div class="scale-labels">
-                            <span>전혀 원하지 않는다</span>
-                            <span>매우 원한다</span>
+                            <span>절대 반대</span>
+                            <span>적극 찬성</span>
                         </div>
                     </div>
                     
                     <div class="question">
-                        <h3>교회에서 AI 기술을 활용하는 것에 대해 어떻게 생각하나요?</h3>
+                        <h3>교회에서 AI 도구를 사용한다면 배우고 싶은 마음이 있나요?</h3>
                         <div class="description">
-                            교회에서 예배 준비, 교육 자료 제작, 목양 관리 등에 AI를 활용하는 것이 도움이 될 것이라고 생각하나요?<br>
-                            AI 기술이 교회 공동체에 긍정적인 변화를 가져올 수 있다고 보시나요?
+                            목회자나 교회에서 AI를 도입한다면, 함께 배우고 활용해보고 싶으신가요?<br>
+                            새로운 것을 배우는 것이 부담스럽지 않으신가요?
                         </div>
                         <div class="likert-scale">
                             <div class="scale-option">
@@ -783,20 +921,20 @@
                             </div>
                         </div>
                         <div class="scale-labels">
-                            <span>전혀 그렇지 않다</span>
-                            <span>매우 그렇다</span>
+                            <span>전혀 관심 없음</span>
+                            <span>매우 배우고 싶음</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="section">
-                    <h2><span class="section-number">4</span>AI의 신앙적 가치 인식</h2>
+                    <h2><span class="section-number">4</span>학습 의지와 적응력</h2>
                     
                     <div class="question">
-                        <h3>AI 기술이 하나님이 주신 지혜와 능력으로 만들어진 도구라고 생각하나요?</h3>
+                        <h3>새로운 기술을 배우는 것에 대한 부담감이 어느 정도인가요?</h3>
                         <div class="description">
-                            AI를 통해 더 나은 이웃 사랑과 섬김을 실천할 수 있다고 보시나요?<br>
-                            기술 발전도 하나님의 창조 질서 안에서 선하게 사용될 수 있다고 생각하시나요?
+                            AI 사용법을 배우는 데 시간을 투자할 의향이 있으신가요?<br>
+                            처음엔 어려워도 계속 연습하면 익숙해질 것이라고 생각하시나요?
                         </div>
                         <div class="likert-scale">
                             <div class="scale-option">
@@ -821,16 +959,16 @@
                             </div>
                         </div>
                         <div class="scale-labels">
-                            <span>전혀 그렇지 않다</span>
-                            <span>매우 그렇다</span>
+                            <span>매우 부담스럽다</span>
+                            <span>전혀 부담 없다</span>
                         </div>
                     </div>
                     
                     <div class="question">
-                        <h3>AI가 신앙적 성장에 도움을 줄 수 있다고 생각하나요?</h3>
+                        <h3>AI 사용 시 실수나 시행착오를 겪어도 괜찮다고 생각하나요?</h3>
                         <div class="description">
-                            성경 이해를 돕거나, 기도 제목을 정리하거나, 신앙적 질문에 대한 답을 찾는 데 AI가 유용할 수 있다고 보시나요?<br>
-                            (물론 AI가 성령님을 대체할 수는 없지만, 보조 도구로서의 역할)
+                            처음엔 잘못 사용할 수도 있지만, 그런 과정을 통해 배워나가는 것이 자연스럽다고 보시나요?<br>
+                            완벽하게 하려고 하기보다는 일단 시도해보는 편이신가요?
                         </div>
                         <div class="likert-scale">
                             <div class="scale-option">
@@ -855,20 +993,20 @@
                             </div>
                         </div>
                         <div class="scale-labels">
-                            <span>전혀 그렇지 않다</span>
-                            <span>매우 그렇다</span>
+                            <span>실수가 두렵다</span>
+                            <span>실수해도 괜찮다</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="section">
-                    <h2><span class="section-number">5</span>학습 및 적응 의지</h2>
+                    <h2><span class="section-number">5</span>AI 윤리와 신앙적 가치관</h2>
                     
                     <div class="question">
-                        <h3>새로운 AI 도구를 배우고 사용해보는 것에 관심이 있나요?</h3>
+                        <h3>AI의 정보를 무조건 믿기보다는 검증하려고 노력하나요?</h3>
                         <div class="description">
-                            유튜브 강의나 교육 자료를 통해 AI 사용법을 익히려는 의지가 있나요?<br>
-                            교회에서 AI 활용 교육이 있다면 참여하고 싶으신가요?
+                            AI가 알려준 성경 구절이나 신앙 관련 정보를 목회자나 다른 자료로 확인해보시겠어요?<br>
+                            AI의 답변이 항상 정확하지 않을 수 있다는 것을 알고 계시나요?
                         </div>
                         <div class="likert-scale">
                             <div class="scale-option">
@@ -893,16 +1031,16 @@
                             </div>
                         </div>
                         <div class="scale-labels">
-                            <span>전혀 관심 없다</span>
-                            <span>매우 관심 있다</span>
+                            <span>무조건 믿는다</span>
+                            <span>항상 검증한다</span>
                         </div>
                     </div>
                     
                     <div class="question">
-                        <h3>기술 변화에 대해 두려움보다는 기대감을 가지고 계신가요?</h3>
+                        <h3>AI는 보조 도구일 뿐, 신앙의 핵심은 여전히 하나님과의 관계라고 생각하나요?</h3>
                         <div class="description">
-                            AI나 새로운 디지털 기술의 발전을 부정적으로만 보지 않고, 좋은 활용 방안을 찾아보려고 하시나요?<br>
-                            변화에 적응하려는 마음가짐을 가지고 계신가요?
+                            AI가 편리하긴 하지만, 기도, 예배, 성경 묵상 등의 근본적인 신앙 행위를 대체할 수는 없다고 보시나요?<br>
+                            AI에 너무 의존하지 않고 균형잡힌 사용을 하려고 하시나요?
                         </div>
                         <div class="likert-scale">
                             <div class="scale-option">
@@ -927,20 +1065,20 @@
                             </div>
                         </div>
                         <div class="scale-labels">
-                            <span>전혀 그렇지 않다</span>
-                            <span>매우 그렇다</span>
+                            <span>AI에 의존적</span>
+                            <span>균형잡힌 시각</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="section">
-                    <h2><span class="section-number">6</span>AI 윤리 및 안전 의식</h2>
+                    <h2><span class="section-number">6</span>실제 활용 계획과 기대</h2>
                     
                     <div class="question">
-                        <h3>AI를 사용할 때 개인정보 보호와 윤리적 사용이 중요하다고 생각하나요?</h3>
+                        <h3>구체적으로 어떤 부분에서 AI의 도움을 받고 싶으신가요?</h3>
                         <div class="description">
-                            AI에 개인정보를 입력할 때 주의해야 한다는 것을 알고 계신가요?<br>
-                            AI로 생성된 내용을 무분별하게 믿지 않고 검토해야 한다는 점을 이해하고 계신가요?
+                            성경 공부 자료 준비, 기도 제목 관리, 찬양 추천, 교회 일정 관리 등<br>
+                            AI가 도움이 될 수 있는 구체적인 영역을 생각해보셨나요?
                         </div>
                         <div class="likert-scale">
                             <div class="scale-option">
@@ -965,8 +1103,8 @@
                             </div>
                         </div>
                         <div class="scale-labels">
-                            <span>전혀 그렇지 않다</span>
-                            <span>매우 그렇다</span>
+                            <span>전혀 생각 안 함</span>
+                            <span>구체적으로 있음</span>
                         </div>
                     </div>
                 </div>
@@ -982,6 +1120,58 @@
                 <h2 id="resultTitle"></h2>
                 <div class="score" id="totalScore"></div>
                 <div class="recommendation" id="recommendation"></div>
+                
+                <button class="toggle-info-btn" onclick="toggleOptionalInfo()">더 정확한 분석을 원하시나요?</button>
+                
+                <div class="optional-info" id="optionalInfo">
+                    <h3>더 정확한 분석을 위한 정보 (선택사항)</h3>
+                    <p>아래 정보는 더 맞춤화된 결과를 제공하기 위해서만 사용됩니다. 모든 항목이 선택사항입니다.</p>
+                    
+                    <div class="info-grid">
+                        <select name="gender" id="gender">
+                            <option value="">성별 (선택사항)</option>
+                            <option value="male">남성</option>
+                            <option value="female">여성</option>
+                        </select>
+                        
+                        <select name="age_group" id="ageGroup">
+                            <option value="">연령대 (선택사항)</option>
+                            <option value="20s">20대</option>
+                            <option value="30s">30대</option>
+                            <option value="40s">40대</option>
+                            <option value="50s">50대</option>
+                            <option value="60plus">60대 이상</option>
+                        </select>
+                        
+                        <select name="tech_level" id="techLevel">
+                            <option value="">기술 사용 수준 (선택사항)</option>
+                            <option value="beginner">초급 (기본 통화/문자)</option>
+                            <option value="intermediate">중급 (앱 사용, 인터넷)</option>
+                            <option value="advanced">고급 (자유자재로 활용)</option>
+                        </select>
+                        
+                        <select name="faith_years" id="faithYears">
+                            <option value="">신앙 생활 (선택사항)</option>
+                            <option value="new">1년 미만</option>
+                            <option value="growing">1-5년</option>
+                            <option value="mature">5년 이상</option>
+                        </select>
+                    </div>
+                    
+                    <input type="email" class="email-input" id="emailInput" placeholder="결과를 이메일로 받고 싶다면 입력 (선택사항)">
+                    
+                    <label class="consent-label">
+                        <input type="checkbox" id="consentCheck"> 
+                        개인정보 처리방침에 동의합니다 (결과 제공 후 즉시 삭제)
+                    </label>
+                    
+                    <button type="button" class="calculate-btn" onclick="generatePersonalizedResult()">맞춤형 분석 받기</button>
+                </div>
+                
+                <div id="personalizedResult" class="personalized-result" style="display: none;">
+                    <h4>맞춤형 분석 결과</h4>
+                    <div id="personalizedContent"></div>
+                </div>
             </div>
         </div>
         
@@ -997,15 +1187,18 @@
             const totalQuestions = 10;
             let answeredQuestions = 0;
             
-            // 모든 질문에 대해 응답이 있는지 확인
             const questions = [
-                'q1_1', 'q1_2', 'q2_1', 'q3_1', 'q3_2', 
+                'q1_1', 'q1_2', 'q2_1', 'q2_2', 'q3_1', 'q3_2', 
                 'q4_1', 'q4_2', 'q5_1', 'q5_2', 'q6_1'
             ];
             
             questions.forEach(question => {
+                const questionElement = document.querySelector(`input[name="${question}"]`).closest('.question');
                 if (document.querySelector(`input[name="${question}"]:checked`)) {
                     answeredQuestions++;
+                    questionElement.classList.add('answered');
+                } else {
+                    questionElement.classList.remove('answered');
                 }
             });
             
@@ -1013,7 +1206,6 @@
             document.getElementById('progressBar').style.width = progressPercentage + '%';
         }
 
-        // 모든 라디오 버튼에 이벤트 리스너 추가
         document.addEventListener('DOMContentLoaded', function() {
             const radioButtons = document.querySelectorAll('input[type="radio"]');
             radioButtons.forEach(button => {
@@ -1023,7 +1215,7 @@
 
         function calculateScore() {
             const questions = [
-                'q1_1', 'q1_2', 'q2_1', 'q3_1', 'q3_2', 
+                'q1_1', 'q1_2', 'q2_1', 'q2_2', 'q3_1', 'q3_2', 
                 'q4_1', 'q4_2', 'q5_1', 'q5_2', 'q6_1'
             ];
             
@@ -1039,73 +1231,214 @@
                 }
             });
             
-            // 모든 질문에 답하지 않은 경우
             if (unansweredQuestions.length > 0) {
                 alert('모든 질문에 답해주세요. 답하지 않은 질문이 있습니다.');
                 return;
             }
             
-            // 결과 표시
+            animateScore(totalScore);
+            showResult(totalScore);
+        }
+
+        function animateScore(finalScore) {
+            let currentScore = 0;
+            const increment = finalScore / 50;
+            
+            const timer = setInterval(() => {
+                currentScore += increment;
+                document.getElementById('totalScore').textContent = Math.floor(currentScore) + '점';
+                
+                if (currentScore >= finalScore) {
+                    clearInterval(timer);
+                    document.getElementById('totalScore').textContent = finalScore + '점';
+                }
+            }, 20);
+        }
+
+        function showResult(totalScore) {
             const resultDiv = document.getElementById('result');
             const resultTitle = document.getElementById('resultTitle');
-            const totalScoreDiv = document.getElementById('totalScore');
             const recommendation = document.getElementById('recommendation');
             
-            totalScoreDiv.textContent = totalScore + '점';
-            
-            // 점수에 따른 결과 분류
             if (totalScore >= 40) {
                 resultDiv.className = 'result excellent';
                 resultTitle.textContent = 'AI 활용 준비 완료';
                 recommendation.innerHTML = `
                     <strong>훌륭합니다!</strong><br>
-                    AI를 신앙생활과 일상에서 효과적으로 활용할 준비가 잘 되어 있습니다. 
-                    이제 실제로 다양한 AI 도구들을 사용해보면서 더욱 발전시켜 나가세요!<br><br>
-                    <em>다양한 AI 도구를 적극 활용해보세요</em><br>
-                    <em>교회 내에서 AI 활용 경험을 나누어주세요</em><br>
-                    <em>다른 성도들의 AI 학습을 도와주세요</em>
+                    AI를 적극적으로 활용할 준비가 잘 되어 있습니다. 
+                    다양한 AI 도구들을 시도해보세요!<br><br>
+                    <strong>🎯 추천 시작점:</strong><br>
+                    • ChatGPT로 성경 공부 질문하기<br>
+                    • 성경앱 AI 기능 활용하기<br>
+                    • 기도 앱으로 기도 생활 관리하기<br>
+                    • AI 번역으로 영어 찬양 이해하기<br><br>
+                    <em>주변 성도들에게도 AI 활용법을 나누어 보세요!</em>
                 `;
             } else if (totalScore >= 30) {
                 resultDiv.className = 'result good';
-                resultTitle.textContent = '기본 준비 완료';
+                resultTitle.textContent = '기본 활용 가능';
                 recommendation.innerHTML = `
-                    기본적인 준비는 잘 되어 있습니다!<br>
-                    추가 학습을 통해 더욱 효과적으로 AI를 활용하실 수 있을 것입니다.<br><br>
-                    <strong>추천 활동:</strong><br>
-                    • 간단한 AI 도구부터 차근차근 사용해보기<br>
-                    • 교회 AI 교육 프로그램 참여하기<br>
-                    • 온라인 AI 활용 강의 수강하기<br>
-                    • 다른 성도들과 AI 활용 경험 나누기
+                    기본적인 AI 활용이 가능한 수준입니다!<br>
+                    간단한 도구부터 차근차근 시작해보세요.<br><br>
+                    <strong>🌱 권장 첫걸음:</strong><br>
+                    • 구글 번역 앱 사용해보기<br>
+                    • 유튜브에서 "성경 AI" 검색해보기<br>
+                    • 간단한 성경앱 다운로드하기<br>
+                    • 시리나 구글 어시스턴트로 찬양 재생하기<br><br>
+                    <strong>💡 학습 방법:</strong><br>
+                    • 교회 청년들에게 도움 요청하기<br>
+                    • 천천히 하나씩 배우기
                 `;
             } else if (totalScore >= 20) {
                 resultDiv.className = 'result caution';
-                resultTitle.textContent = '학습 필요';
+                resultTitle.textContent = '학습 후 활용 권장';
                 recommendation.innerHTML = `
-                    AI 활용을 위해 기초적인 학습과 연습이 필요한 상태입니다.<br>
-                    걱정하지 마세요! 차근차근 배워나가시면 됩니다.<br><br>
-                    <strong>단계별 학습 방법:</strong><br>
-                    • 기본적인 스마트폰/컴퓨터 활용법 익히기<br>
-                    • 간단한 AI 서비스(번역, 음성인식) 사용해보기<br>
-                    • 교회에서 제공하는 디지털 교육 참여하기<br>
-                    • 가족이나 지인의 도움을 받아 천천히 배우기
+                    기초 학습이 필요한 단계입니다.<br>
+                    교회나 지인의 도움을 받아 천천히 시작해보세요.<br><br>
+                    <strong>📚 우선 필요한 것들:</strong><br>
+                    • 스마트폰 기본 사용법 익히기<br>
+                    • 인터넷 검색 연습하기<br>
+                    • 앱 다운로드 방법 배우기<br>
+                    • AI에 대한 기본 이해하기<br><br>
+                    <strong>🤝 추천 학습 방법:</strong><br>
+                    • 가족이나 친구에게 가르침 받기<br>
+                    • 교회 디지털 소그룹 참여하기<br>
+                    • 도서관 디지털 강의 수강하기
                 `;
             } else {
                 resultDiv.className = 'result poor';
-                resultTitle.textContent = '단계적 접근 권장';
+                resultTitle.textContent = '단계적 접근 필요';
                 recommendation.innerHTML = `
-                    디지털 기초부터 차근차근 시작하여 점진적으로 발전시켜 나가세요.<br>
-                    서두르지 마시고 자신의 속도에 맞게 배워나가시면 됩니다.<br><br>
-                    <strong>첫걸음 가이드:</strong><br>
-                    • 스마트폰 기본 기능부터 익히기<br>
-                    • 인터넷 검색 방법 배우기<br>
-                    • 교회에서 제공하는 기초 디지털 교육 참여<br>
-                    • 자녀나 주변 분들께 도움 요청하기<br>
-                    • 천천히, 부담 없이 하나씩 배워나가기
+                    서두르지 마세요! 디지털 기초부터 천천히 시작하시면 됩니다.<br><br>
+                    <strong>🐌 천천히 시작하기:</strong><br>
+                    • 스마트폰으로 전화 걸기/받기부터<br>
+                    • 문자 보내기 연습하기<br>
+                    • 사진 찍기와 보기<br>
+                    • 간단한 앱 하나씩 익히기<br><br>
+                    <strong>💪 격려의 말씀:</strong><br>
+                    나이는 숫자일 뿐입니다! 많은 시니어분들이 AI를 잘 활용하고 계세요.<br>
+                    <em>"배움에는 늦은 나이가 없습니다. 하나님께서 주신 지혜로 차근차근 배워나가세요."</em><br><br>
+                    <strong>🆘 도움 받을 곳:</strong><br>
+                    • 자녀나 손자녀에게 부탁하기<br>
+                    • 교회 젊은 성도들에게 도움 요청<br>
+                    • 지역 주민센터 디지털 교육 참여
                 `;
             }
             
             resultDiv.style.display = 'block';
             resultDiv.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function toggleOptionalInfo() {
+            const optionalInfo = document.getElementById('optionalInfo');
+            const toggleBtn = document.querySelector('.toggle-info-btn');
+            
+            if (optionalInfo.style.display === 'none' || optionalInfo.style.display === '') {
+                optionalInfo.style.display = 'block';
+                toggleBtn.textContent = '선택사항 숨기기';
+            } else {
+                optionalInfo.style.display = 'none';
+                toggleBtn.textContent = '더 정확한 분석을 원하시나요?';
+            }
+        }
+
+        function generatePersonalizedResult() {
+            const gender = document.getElementById('gender').value;
+            const ageGroup = document.getElementById('ageGroup').value;
+            const techLevel = document.getElementById('techLevel').value;
+            const faithYears = document.getElementById('faithYears').value;
+            const email = document.getElementById('emailInput').value;
+            const consent = document.getElementById('consentCheck').checked;
+            
+            if (email && !consent) {
+                alert('이메일을 입력하신 경우 개인정보 처리방침에 동의해주세요.');
+                return;
+            }
+
+            let personalMessage = generatePersonalizedMessage(gender, ageGroup, techLevel, faithYears);
+            
+            document.getElementById('personalizedContent').innerHTML = personalMessage;
+            document.getElementById('personalizedResult').style.display = 'block';
+            
+            if (email && consent) {
+                // 여기서 이메일 발송 로직 (실제 구현 시)
+                alert('분석 결과가 이메일로 발송됩니다. (데모 버전)');
+            }
+        }
+
+        function generatePersonalizedMessage(gender, age, tech, faith) {
+            let message = '<div style="line-height: 1.8;">';
+            
+            // 연령대별 맞춤 분석
+            if (age === '20s' || age === '30s') {
+                message += `
+                    <h5 style="color: #667eea; margin-bottom: 10px;">🌟 ${age === '20s' ? '20대' : '30대'} 성도님을 위한 맞춤 분석</h5>
+                    디지털 네이티브 세대로서 AI 활용에 큰 장점이 있습니다!<br><br>
+                    <strong>🚀 적극 활용 추천:</strong><br>
+                    • ChatGPT로 깊이 있는 성경 공부<br>
+                    • AI 기반 성경 앱들 (YouVersion, Olive Tree)<br>
+                    • 개인화된 기도 앱 (PrayerMate, Echo Prayer)<br>
+                    • AI 작곡 도구로 찬양 만들기<br><br>
+                    <strong>💡 특별 제안:</strong><br>
+                    시니어 성도님들께 AI 활용법을 가르쳐드리는 멘토 역할을 해보세요!
+                `;
+            } else if (age === '40s' || age === '50s') {
+                message += `
+                    <h5 style="color: #667eea; margin-bottom: 10px;">💼 ${age === '40s' ? '40대' : '50대'} 성도님을 위한 맞춤 분석</h5>
+                    가정과 직장에서 바쁜 일상 속에서 AI가 큰 도움이 될 것입니다.<br><br>
+                    <strong>⏰ 시간 절약 도구들:</strong><br>
+                    • AI로 빠른 성경 검색 및 교차 참조<br>
+                    • 자동화된 기도 제목 관리<br>
+                    • 가족 신앙 교육 자료 AI 활용<br>
+                    • 효율적인 교회 봉사 업무 지원<br><br>
+                    <strong>👨‍👩‍👧‍👦 가정 적용:</strong><br>
+                    자녀들과 함께 AI를 활용한 가정예배를 시도해보세요.
+                `;
+            } else if (age === '60plus') {
+                message += `
+                    <h5 style="color: #667eea; margin-bottom: 10px;">🧙‍♂️ 시니어 성도님을 위한 맞춤 분석</h5>
+                    풍부한 신앙 경험을 AI와 결합하면 더욱 풍성한 영성 생활이 가능합니다.<br><br>
+                    <strong>🎯 시니어 친화적 시작점:</strong><br>
+                    • 음성으로 성경 구절 찾기<br>
+                    • 큰 글씨로 성경 읽기 앱<br>
+                    • 간단한 기도 알림 기능<br>
+                    • 건강 관련 기도 제목 관리<br><br>
+                    <strong>🤝 학습 조언:</strong><br>
+                    자녀나 손자녀와 함께 배우시면 더욱 즐겁고 효과적입니다.
+                `;
+            }
+            
+            // 기술 수준별 추가 조언
+            if (tech === 'beginner') {
+                message += `<br><strong>📱 초급자 특별 가이드:</strong><br>
+                먼저 스마트폰의 음성 인식 기능(시리, 구글 어시스턴트)부터 시작해보세요. 
+                "성경 요한복음 3장 16절 읽어줘"라고 말해보시는 것부터 시작하면 좋겠습니다.`;
+            } else if (tech === 'advanced') {
+                message += `<br><strong>🔧 고급 사용자 특별 조언:</strong><br>
+                AI API를 활용한 개인 맞춤형 성경 공부 시스템을 만들어보시거나, 
+                교회를 위한 AI 도구 도입을 제안해보는 것은 어떨까요?`;
+            }
+            
+            // 신앙 경력별 추가 조언
+            if (faith === 'new') {
+                message += `<br><br><strong>🌱 새신자 특별 조언:</strong><br>
+                AI를 활용해서 성경을 더 쉽게 이해해보세요. 
+                어려운 성경 구절을 AI에게 쉽게 설명해달라고 요청하면 좋은 출발점이 됩니다.`;
+            } else if (faith === 'mature') {
+                message += `<br><br><strong>🏆 성숙한 신앙인 특별 조언:</strong><br>
+                깊이 있는 성경 연구를 위해 AI를 활용해보세요. 
+                원어 해석이나 다양한 주석 비교, 신학적 질문들을 AI와 함께 탐구해보시기 바랍니다.`;
+            }
+            
+            // 성별별 추가 고려사항
+            if (gender === 'female') {
+                message += `<br><br><strong>👩 여성 성도님을 위한 추가 팁:</strong><br>
+                AI를 활용한 자녀 신앙 교육이나 소그룹 리더십에 관심이 있으시다면, 
+                교육 콘텐츠 제작이나 관계적 돌봄에 AI를 활용해보세요.`;
+            }
+            
+            message += '</div>';
+            return message;
         }
 
         // 페이지 로드 시 진행률 초기화
@@ -1114,4 +1447,16 @@
         });
     </script>
 </body>
-</html>
+</html>">1</span>
+                            <span>AI에 대한 기본 이해도</span>
+                        </div>
+                        <div class="area-item">
+                            <span class="area-number">2</span>
+                            <span>디지털 기기 활용 능력</span>
+                        </div>
+                        <div class="area-item">
+                            <span class="area-number">3</span>
+                            <span>신앙생활에서의 AI 활용 의지</span>
+                        </div>
+                        <div class="area-item">
+                            <span class="area-number
