@@ -898,7 +898,7 @@
                         <div class="likert-scale">
                             <div class="scale-option">
                                 <input type="radio" name="q1_3" value="5" id="q1_3_1">
-                                <label for="q1_3_1">매우 관심 있고<br>적극 사용 중</label>
+                                <label for="q1_3_1">매우 관심 있고<br>적극/가끔 사용 중</label>
                             </div>
                             <div class="scale-option">
                                 <input type="radio" name="q1_3" value="4" id="q1_3_2">
@@ -1502,16 +1502,16 @@
             let ageAdvice = '';
             
             if (ageGroup === '1') {
-                ageAdvice = '<strong>🌟 20-30대 맞춤 조언:</strong><br>• 최신 AI 앱과 도구를 적극 활용하세요<br>• 가정예배와 자녀 교육에 AI를 접목해보세요<br>';
+                ageAdvice = '<strong> 20-30대 맞춤 조언:</strong><br>• 최신 AI 앱과 도구를 적극 활용하세요<br>• 가정예배와 자녀 교육에 AI를 접목해보세요<br>';
             } else if (ageGroup === '2') {
-                ageAdvice = '<strong>👨‍👩‍👧‍👦 40-50대 맞춤 조언:</strong><br>• 교회 사역과 가정 관리에 AI를 활용하세요<br>• 자녀와 함께 AI를 배우며 소통하세요<br>';
+                ageAdvice = '<strong>40-50대 맞춤 조언:</strong><br>• 교회 사역과 가정 관리에 AI를 활용하세요<br>• 자녀와 함께 AI를 배우며 소통하세요<br>';
             } else if (ageGroup === '3') {
-                ageAdvice = '<strong>👴👵 60대 이상 맞춤 조언:</strong><br>• 음성 기능 중심의 간단한 AI부터 시작하세요<br>• 가족의 도움을 받아 천천히 배워나가세요<br>';
+                ageAdvice = '<strong> 60대 이상 맞춤 조언:</strong><br>• 음성 기능 중심의 간단한 AI부터 시작하세요<br>• 가족의 도움을 받아 천천히 배워나가세요<br>';
             }
             
             if (totalScore >= 60) {
                 resultDiv.className = 'result excellent';
-                resultTitle.textContent = '🚀 적극 활용 가능';
+                resultTitle.textContent = '적극 활용 가능';
                 recommendation.innerHTML = `
                     <strong>축하합니다!</strong><br>
                     AI를 신앙생활에 적극적으로 활용할 준비가 완료되었습니다! 
@@ -1525,7 +1525,7 @@
                 `;
             } else if (totalScore >= 45) {
                 resultDiv.className = 'result good';
-                resultTitle.textContent = '👍 기본 활용 준비됨';
+                resultTitle.textContent = '기본 활용 준비됨';
                 recommendation.innerHTML = `
                     좋습니다! 기본적인 AI 활용이 가능한 수준입니다. 
                     간단한 도구부터 시작하여 점진적으로 확장해나가세요.<br><br>
@@ -1538,7 +1538,7 @@
                 `;
             } else if (totalScore >= 30) {
                 resultDiv.className = 'result caution';
-                resultTitle.textContent = '📚 학습 후 활용 가능';
+                resultTitle.textContent = '학습 후 활용 가능';
                 recommendation.innerHTML = `
                     기본 학습을 통해 AI 활용이 가능합니다. 
                     교회나 지인의 도움을 받아 차근차근 시작해보세요.<br><br>
@@ -1547,20 +1547,20 @@
                     • 교회 디지털 교육 프로그램 참여<br>
                     • 간단한 음성 명령부터 시작하기<br><br>
                     ${ageAdvice}
-                    <strong>💪 힘내세요!</strong> 한 번에 하나씩 천천히 배워나가면 됩니다.
+                    <strong> 힘내세요!</strong> 한 번에 하나씩 천천히 배워나가면 됩니다.
                 `;
             } else {
                 resultDiv.className = 'result poor';
-                resultTitle.textContent = '🌱 단계적 접근 필요';
+                resultTitle.textContent = ' 단계적 접근 필요';
                 recommendation.innerHTML = `
                     천천히 기초부터 시작하세요. 가족이나 교회의 체계적인 지원을 받으시면 
                     충분히 AI를 활용할 수 있게 될 것입니다.<br><br>
-                    <strong>🎯 우선 순위:</strong><br>
+                    <strong> 우선 순위:</strong><br>
                     • 스마트폰 기본 기능 익히기<br>
                     • 가족과 함께 차근차근 배우기<br>
                     • 교회 기초 디지털 교육 참여<br><br>
                     ${ageAdvice}
-                    <strong>🌟 격려의 말씀:</strong> 나이와 상관없이 누구나 배울 수 있습니다!<br>
+                    <strong> 격려의 말씀:</strong> 나이와 상관없이 누구나 배울 수 있습니다!<br>
                     하나님께서 주신 지혜로 새로운 도전을 시작해보세요.
                 `;
             }
